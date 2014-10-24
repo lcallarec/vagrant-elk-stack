@@ -1,0 +1,26 @@
+#!/usr/bin/env ruby
+#^syntax detection
+
+site 'https://supermarket.getchef.com/api/v1'
+
+cookbook "apache2"
+cookbook 'java', '~> 1.28.0'
+cookbook "apt"
+cookbook "git"
+cookbook "build-essential"
+cookbook 'logstash'
+cookbook 'elasticsearch'
+cookbook 'kibana', 
+	:git => 'https://github.com/realityforge/chef-kibana'
+
+
+# cookbook 'chef-client'
+
+# cookbook 'apache2', '>= 1.0.0'
+
+# cookbook 'rvm',
+#   :git => 'https://github.com/fnichol/chef-rvm'
+
+# cookbook 'postgresql',
+#   :git => 'https://github.com/findsyou/cookbooks',
+#   :ref => 'postgresql-improvements'
