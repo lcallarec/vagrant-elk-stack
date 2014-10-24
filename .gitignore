@@ -1,0 +1,4 @@
+/chef/cookbooks
+/chef/tmp
+.vagrant/
+.idea/
