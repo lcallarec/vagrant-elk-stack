@@ -12,6 +12,7 @@ Vagrant.configure("2") do |config|
 
   config.vm.network :forwarded_port, guest: 80, host: 8080
   config.vm.network :forwarded_port, guest: 9200, host: 9222
+  config.vm.network :forwarded_port, guest: 5010, host: 5000
 
   config.vm.network :private_network, ip: settings['network.ip']
 
@@ -47,7 +48,9 @@ Vagrant.configure("2") do |config|
       "version" => '3',
       "kibana3_version" => '3.1.1',
       "elasticsearch" => {
-        "host" => ['localhost']
+        "allocated_memory" => "512M",
+        "host" => ['localhost'],
+        "cluster" => { "name" => "lc_cluster" }
       },
       "apache" => {
         "interface" => settings['network.ip']
