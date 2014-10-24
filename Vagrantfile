@@ -30,6 +30,7 @@ Vagrant.configure("2") do |config|
     # List of recipes to run
     chef.cookbooks_path = ['chef/cookbooks', 'chef/local_cookbooks']
     
+    chef.add_recipe "apt::default"
     chef.add_recipe "apache2"
     chef.add_recipe "java"
     chef.add_recipe "logstash"
