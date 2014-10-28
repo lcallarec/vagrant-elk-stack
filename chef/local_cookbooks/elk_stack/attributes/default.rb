@@ -1,0 +1,1 @@
+node.default['elasticsearch']['plugins']['royrusso/elasticsearch-HQ'] = {}

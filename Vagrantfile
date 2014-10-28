@@ -30,14 +30,9 @@ Vagrant.configure("2") do |config|
   config.vm.provision :chef_solo do |chef|
     # List of recipes to run
     chef.cookbooks_path = ['chef/cookbooks', 'chef/local_cookbooks']
-    
-    chef.add_recipe "apt::default"
-    chef.add_recipe "apache2"
-    chef.add_recipe "java"
-    chef.add_recipe "logstash"
-    chef.add_recipe "elasticsearch"
-    chef.add_recipe "kibana"
-    chef.add_recipe "kibana::apache"
+   
+    chef.add_recipe "elk_stack"
+
     chef.json = {
      "java" => {
       "install_flavor" => "openjdk",
