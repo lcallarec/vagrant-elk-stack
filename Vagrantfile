@@ -31,22 +31,14 @@ Vagrant.configure("2") do |config|
     # List of recipes to run
     chef.cookbooks_path = ['chef/cookbooks', 'chef/local_cookbooks']
    
-    chef.add_recipe "elk_stack"
+    chef.add_recipe "es"
+    chef.add_recipe "ls"
+    #chef.add_recipe "elkstack"
 
     chef.json = {
-     "java" => {
-      "install_flavor" => "openjdk",
-      "jdk_version" => 7,
-      "openjdk_packages" => ['openjdk-7-jdk']
-     },
      "kibana" => {
       "version" => '3',
       "kibana3_version" => '3.1.1',
-      "elasticsearch" => {
-        "allocated_memory" => "512M",
-        "host" => ['localhost'],
-        "cluster" => { "name" => "lc_cluster" }
-      },
       "apache" => {
         "interface" => settings['network.ip']
       }

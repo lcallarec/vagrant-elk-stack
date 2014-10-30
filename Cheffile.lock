@@ -17,8 +17,6 @@ SITE
     build-essential (2.1.2)
     chef_handler (1.1.6)
     dmg (2.2.0)
-    elasticsearch (0.3.10)
-      ark (>= 0.2.4)
     git (4.0.2)
       build-essential (>= 0.0.0)
       dmg (>= 0.0.0)
@@ -49,18 +47,17 @@ SITE
       yum-epel (>= 0.0.0)
     windows (1.34.6)
       chef_handler (>= 0.0.0)
-    yum (3.4.0)
-    yum-epel (0.5.1)
+    yum (3.4.1)
+    yum-epel (0.5.2)
       yum (~> 3.0)
 
 GIT
-  remote: https://github.com/realityforge/chef-kibana
+  remote: https://github.com/elasticsearch/cookbook-elasticsearch
   ref: master
-  sha: aa9a0d3debfab91740bfee98eae7252720ea8515
+  sha: ed0a9d0e16371663177b4079acc645abc4ebb1a0
   specs:
-    kibana (0.1.9)
-      ark (>= 0.0.0)
-      build-essential (>= 0.0.0)
+    elasticsearch (0.3.11)
+      ark (>= 0.2.4)
 
 DEPENDENCIES
   apache2 (>= 0)
@@ -69,6 +66,5 @@ DEPENDENCIES
   elasticsearch (>= 0)
   git (>= 0)
   java (~> 1.28.0)
-  kibana (>= 0)
   logstash (>= 0)
 

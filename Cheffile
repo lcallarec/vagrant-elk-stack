@@ -8,10 +8,13 @@ cookbook 'java', '~> 1.28.0'
 cookbook "apt"
 cookbook "git"
 cookbook "build-essential"
-cookbook 'logstash'
-cookbook 'elasticsearch'
-cookbook 'kibana', 
-	:git => 'https://github.com/realityforge/chef-kibana'
+depends 'elasticsearch', '~> 0.3'
+depends 'logstash', '~> 0.9'
+        :git => 'https://github.com/elasticsearch/cookbook-elasticsearch'
+#cookbook 'kibana', 
+	#:git => 'https://github.com/realityforge/chef-kibana'
+
+#cookbook 'elkstack', '= 0.1.1'
 
 
 # cookbook 'chef-client'

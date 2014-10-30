@@ -1,0 +1,1 @@
+node.override['logstash']['instance']['agent'] = ''
