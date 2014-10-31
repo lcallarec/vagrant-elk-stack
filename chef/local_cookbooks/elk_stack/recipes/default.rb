@@ -1,13 +1,5 @@
+include_recipe "build-essential"
 include_recipe "apt::default"
-include_recipe "apache2"
-include_recipe "java"
-include_recipe "logstash::server"
-include_recipe "elasticsearch"
-include_recipe "elasticsearch::plugins"
-include_recipe "kibana"
-include_recipe "kibana::apache"
+include_recipe "java::default"
 
-service "elasticsearch" do
-  action [:restart]
-end
 

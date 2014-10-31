@@ -1,12 +1,7 @@
-depends "apache2"
+depends 'build-essential'
+depends 'apt'
 depends 'java'
-depends "apt"
-depends "git"
-depends "build-essential"
-depends 'logstash'
+depends 'apache2'
 depends 'elasticsearch'
 depends 'kibana'
-
-%w{ debian ubuntu }.each do |os|
-supports os
-end
+depends 'logstash'

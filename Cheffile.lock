@@ -59,6 +59,15 @@ GIT
     elasticsearch (0.3.11)
       ark (>= 0.2.4)
 
+GIT
+  remote: https://github.com/realityforge/chef-kibana
+  ref: master
+  sha: cb3a3212d6d01393c467123b51c87e2561169370
+  specs:
+    kibana (0.1.9)
+      ark (>= 0.0.0)
+      build-essential (>= 0.0.0)
+
 DEPENDENCIES
   apache2 (>= 0)
   apt (>= 0)
@@ -66,5 +75,6 @@ DEPENDENCIES
   elasticsearch (>= 0)
   git (>= 0)
   java (~> 1.28.0)
-  logstash (>= 0)
+  kibana (>= 0)
+  logstash (~> 0.9.2)
 
