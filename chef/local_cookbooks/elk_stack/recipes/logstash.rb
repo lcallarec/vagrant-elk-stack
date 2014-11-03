@@ -10,7 +10,7 @@ logstash_config 'agent' do
   templates ls_templates
   templates_cookbook 'elk_stack'
   variables(
-  	elasticsearch_cluster: node.default['elasticsearch']['cluster']['name'],
+  	elasticsearch_cluster: node['elasticsearch']['cluster']['name'],
   	elasticsearch_ip: '127.0.0.1'
   )
   # don't need notifies since the LWRP does it
