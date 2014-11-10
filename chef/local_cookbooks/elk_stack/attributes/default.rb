@@ -15,9 +15,6 @@ node.override['logstash']['instance']['server'] = ''
 
 node.default['logstash']['instance']['agent']['templates'] = {}
 
-node.default['logstash']['instance']['agent']['templates']['input_syslog'] = 'config/logstash/input/file.conf.erb'
-node.default['logstash']['instance']['agent']['templates']['output_elasticsearch'] = 'config/logstash/output/elasticsearch.conf.erb'
-
 node.default['kibana']['version'] = '3'
 node.default['kibana']['kibana3_version'] = '3.1.1'
 node.default['kibana']['apache']['interface'] = '*'
