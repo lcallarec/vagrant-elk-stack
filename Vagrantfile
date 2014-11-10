@@ -34,6 +34,18 @@ Vagrant.configure("2") do |config|
     chef.add_recipe "elk_stack::elasticsearch"
     chef.add_recipe "elk_stack::logstash"
     chef.add_recipe "elk_stack::kibana"
-   
+    
+    chef.json = {
+      "logstash" => {
+        "instance" => {
+          "agent" => {
+            "templates" => {
+              "input_gelf" => "config/logstash/input/gelf.conf.erb",
+              "output_logstash" => "config/logstash/output/elasticsearch.conf.erb"
+            }
+          }
+        }
+      }
+    }
   end
 end
